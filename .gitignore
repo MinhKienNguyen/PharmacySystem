@@ -1,0 +1,8 @@
+﻿*.log
+./bin/
+PharmacySystem.BLL/bin/
+PharmacySystem.BLL/obj/
+PharmacySystem.DAL/bin/
+PharmacySystem.DAL/obj/
+PharmacySystem.UI/bin/
+PharmacySystem.UI/obj/
