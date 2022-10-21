@@ -3,6 +3,7 @@ using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
 using DevExpress.XtraTab;
 using PharmacySystem.UC;
+using PharmacySystem.UI.UC;
 using System;
 using System.Windows.Forms;
 
@@ -193,8 +194,8 @@ namespace PharmacySystem.UI
 
         private void btnBanHang_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //UC_BanHang bh = new UC_BanHang();
-            //AddTabControl(bh, "Bán hàng");
+            UC_InvoiceSale invoiceSale = new UC_InvoiceSale();
+            AddTabControl(invoiceSale, "Lên hóa đơn thuốc");
         }
 
         private void btnHoaDon_ItemClick(object sender, ItemClickEventArgs e)

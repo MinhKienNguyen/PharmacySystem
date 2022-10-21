@@ -628,7 +628,7 @@
             // 
             // btnNhapHang
             // 
-            this.btnNhapHang.Caption = "Nhập hàng";
+            this.btnNhapHang.Caption = "Nhập thuốc";
             this.btnNhapHang.Id = 55;
             this.btnNhapHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNhapHang.ImageOptions.Image")));
             this.btnNhapHang.Name = "btnNhapHang";
@@ -778,7 +778,7 @@
             // 
             // btnBanHang
             // 
-            this.btnBanHang.Caption = "Bán hàng";
+            this.btnBanHang.Caption = "Bán thuốc";
             this.btnBanHang.Id = 76;
             this.btnBanHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBanHang.ImageOptions.Image")));
             this.btnBanHang.Name = "btnBanHang";

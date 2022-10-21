@@ -53,8 +53,10 @@
   <ItemGroup>
     <Compile Include="Implement\CustomerBLL.cs" />
     <Compile Include="Implement\InvoiceBLL.cs" />
+    <Compile Include="Implement\ProductBLL.cs" />
     <Compile Include="Interfaces\ICustomerBLL.cs" />
     <Compile Include="Interfaces\IInvoiceBLL.cs" />
+    <Compile Include="Interfaces\IProductBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

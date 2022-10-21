@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PharmacySystem.BLL.Interfaces
 {
-    interface IInvoiceBLL
+    public interface IInvoiceBLL
     {
     }
 }
