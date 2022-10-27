@@ -2,17 +2,20 @@
 using PharmacySystem.DAL.Entity;
 using PharmacySystem.DAL.Model;
 using PharmacySystem.DAL.Object;
+using PharmacySystem.DAL.Sequence;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace PharmacySystem.DAL.DataAccessLayer.Inplement
 {
-    public class ProductDAL: IProductDAL
+    public class ProductDAL : IProductDAL
     {
         private readonly DBPharmacyContext _dBPharmacyContext;
+        private readonly ISequencesDAL _sequencesDAL;
         public ProductDAL()
         {
             _dBPharmacyContext = new DBPharmacyContext();
+            _sequencesDAL = new SequencesDAL();
         }
 
         public List<ProductType> GetProductTypes()
@@ -23,26 +26,26 @@ namespace PharmacySystem.DAL.DataAccessLayer.Inplement
         public List<ProductInfor> GetProductByProductType(string productType)
         {
             var result = (from product in _dBPharmacyContext.Products
-                         join unit in _dBPharmacyContext.Units on product.UnitId equals unit.UnitId
-                         join prodType in _dBPharmacyContext.ProductTypes on product.ProductTypeId equals prodType.ProductTypeId
-                         where product.ProductTypeId == productType.Trim()
-                         select new ProductInfor
-                         {
-                             ProductTypeId = product.ProductTypeId,
-                             ProductTypeName = prodType.ProductTypeName,
-                             ProductId = product.ProductId,
-                             ProductName = product.ProductName,
-                             UnitId = unit.UnitId,
-                             UnitName = unit.UnitName,
-                             Quantity = product.Quantity,
-                             Pharmaceutical = product.Pharmaceutical,
-                             Concentrations = product.Concentrations,
-                             CountryManufacture = product.CountryManufacture,
-                             EntryPrice = product.EntryPrice,
-                             ExportPrice = product.ExportPrice,
-                             Manufacturer = product.Manufacturer,
-                             Remark = product.Remark
-                         }).ToList();
+                          join unit in _dBPharmacyContext.Units on product.UnitId equals unit.UnitId
+                          join prodType in _dBPharmacyContext.ProductTypes on product.ProductTypeId equals prodType.ProductTypeId
+                          where product.ProductTypeId == productType.Trim()
+                          select new ProductInfor
+                          {
+                              ProductTypeId = product.ProductTypeId,
+                              ProductTypeName = prodType.ProductTypeName,
+                              ProductId = product.ProductId,
+                              ProductName = product.ProductName,
+                              UnitId = unit.UnitId,
+                              UnitName = unit.UnitName,
+                              Quantity = product.Quantity,
+                              Pharmaceutical = product.Pharmaceutical,
+                              Concentrations = product.Concentrations,
+                              CountryManufacture = product.CountryManufacture,
+                              EntryPrice = product.EntryPrice,
+                              ExportPrice = product.ExportPrice,
+                              Manufacturer = product.Manufacturer,
+                              Remark = product.Remark
+                          }).ToList();
             return result;
         }
     }

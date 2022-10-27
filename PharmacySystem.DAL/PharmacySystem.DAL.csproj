@@ -53,8 +53,12 @@
   <ItemGroup>
     <Compile Include="DataAccessLayer\Inplement\CustomerDAL.cs" />
     <Compile Include="DataAccessLayer\Inplement\ProductDAL.cs" />
+    <Compile Include="DataAccessLayer\Inplement\SequencesDAL.cs" />
+    <Compile Include="DataAccessLayer\Inplement\SystemDAL.cs" />
     <Compile Include="DataAccessLayer\Interfaces\ICustomerDAL.cs" />
     <Compile Include="DataAccessLayer\Interfaces\IProductDAL.cs" />
+    <Compile Include="DataAccessLayer\Interfaces\ISequencesDAL.cs" />
+    <Compile Include="DataAccessLayer\Interfaces\ISystemDAL.cs" />
     <Compile Include="Entity\DBPharmacyContext.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\Invoice.cs" />
@@ -62,8 +66,10 @@
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\ProductType.cs" />
     <Compile Include="Model\Unit.cs" />
+    <Compile Include="Object\ProductCharge.cs" />
     <Compile Include="Object\ProductInfor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sequence\UnitSequence.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
